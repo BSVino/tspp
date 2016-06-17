@@ -1,0 +1,61 @@
+beta 1:
+-Basic support for weapon restrictions.
+-pistols only, shotguns only, smgs only, knives only, rifles only
+
+beta 2:
+-Created commands accessable by the client.
+-Rcon commands no longer require passwords (if they have rcon, they're trusted anyways.)
+-Created a tspp_knall cvar, which, if enabled (1), ensures that knives and nades are allways unrestricted. (except for if they are restricted explicitly, or if tspp_restrict all, gotta keep those fu fights!)
+-tspp_restrict and tspp_unrestrict will now work for 'pistols' 'shotguns' 'smgs' 'rifles' or any individual weapon, as listed in tspp_restrict list for example, tspp_restrict rifles will restrict all rifles, while keeping other weapon restriction settings the same.
+-TSPP now displays a restriction message if a player switches to a restricted message.
+-Figured out some more TS variables, added them to ts.h
+-Added tspp_god [password]. I go so annoyed about people killing me while I was testing my plugin that I added this.
+-Plugin re-reads addons/tsplusplus/tspp.cfg at the start of every map.
+-Plugin sends the current restriction to players entering the game. NOTE: the MOTD is still up at this point. Anybody know how to figure out when the player has pressed the OK button, so he will actually see the message?
+-Bugfix: The server will load autoexec.cfg on start (Don't do that automatically, I know I know)
+
+1.0:
+-TSPP will inform the user before s/he logs in as to the state of gameplay. I abandoned trying to tell him when he enters teh game, he will get it on game connect.
+-Added Desperado mode! This mode restricts all ammo buying, so players have only the bullets in their gun and must pick up additional ammo. Thank you Shinobi for this great idea!
+-Players on team "spectator" will not be allowed to spawn.
+-Added the tspp_forcespec cvar to set spawning restrictions. Set to 1 to force all players on the "spectator" team.
+-tspp_forcespec does not apply to anyone who has the tspp_goplay [wonid] [passwd] command executed on them. You can reset that list with "tspp_goplay reset". (Thanks to Cade for the name!)
+-You can also tspp_dontplay [wonid] [passwd] people to force them on the spectating team.
+-The plugin sends "hello" (wonid 1604518) a message about how lame he is.
+-You can change a player's team with the tspp_team [wonid] [team] [passwd]
+-Bugfix: Players changing teams with "model Gordon" would appear as enemies in crosshairs. The capitol letter caused the problem.
+-Sets the game description to "TS Beta 1.5"
+-Players are informed over chat when settings are changed.
+-All events are logged.
+-moved 'dlls' directory to 'lib'. (No dll's in Linux!)
+
+1.1:
+-The bugs were too great! I began again with the beta 2 code, and I'm slowly re-adding features again. Hopefully, I can avoid those killer bugs this time. Features which are still in 1.1 are listed here, other features have not yet been implimented.
+-Players on team "spectator" will not be allowed to spawn.
+-I made it so that a couple cvars will show up on the server info list.
+-The plugin tells players specifically which weapons have just been restricted.
+-Corrected teh spelling of "barrett" (was "barret", like the cool black guy in FF7 :-P)
+-Added Desperado mode! This mode restricts all ammo buying, so players have only the bullets in their gun and must pick up additional ammo. Thank you Shinobi for this great idea!
+-Bugfix: Players changing teams with "model Gordon" would appear as enemies in crosshairs. The capitol letter caused the problem.
+-Sets the game description to "TS Beta 1.5"
+-Players are informed over chat when settings are changed.
+-moved 'dlls' directory to 'lib'. (No dll's in Linux!)
+
+TODO:
+-Tracer bullets! (Thanks Ownij) (Stricken, tracer bullets in 2.0)
+-Load mapname.cfg for every map.
+-Accessory restrictions and stealth boots in deathmatch.
+-MOTD command to bring up the MOTD at any given time.
+-Figure out how the server tells teh client where to look. (first person spec)
+-Optional view rotating for stunts (side rolls, and rolling while prone)
+-Figure out how the server sends messages about lights to the client (yay for muzzle flashes)
+-Limit the number of weapons a player can buy
+-Tripwires that cause players to dive (Thanks Trauts)
+-See if we can fix the grenade buying problem
+-Configure the number of kills per weapon
+-X vs X dueling. Intercept and force +attack while dead to control spawned players.
+-"The One" mode. (Stricken, comes with 2.0)
+-Giving players powerup abilities, and restricing certain powerups from spawning. (spread the out more?)
+-ALLTALK!
+-Restrict the HLDM models (gman, zombie) from being used.
+-tspp_regeneration ten health for every frag (Thanks mod!)

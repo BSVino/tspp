@@ -1,0 +1,21 @@
+// vim: set ft=cpp :
+
+// Sven Coop
+//    http://www.svencoop.com/
+
+// Svencoop 1.9
+monster_chumtoad
+squadmaker
+trigger_random
+trigger_random_time
+weapon_uziakimbo
+
+// Svencoop 2.0
+//
+// From: Eric Gisse <jowr@sdf.lonestar.org>
+// Date: Sat, 22 Dec 2001 18:53:11 -0900
+
+monster_babygarg
+monster_hwgrunt
+trigger_respawn
+trigger_secret
